@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<style>
+</style>
+{% if modification %}
+<h2 class="titre center">
+ Modifier {{ citoyen.nom  }} {{ citoyen.prenom   }}
+</h2>
+{% else %}
+<h2 class="titre center">
+  Ajouter un citoyen
+</h2>
+{% endif %}
+<div class="container">
+{{ form_start(form) }}
+{{form_row(form.nom)}}
+{{form_row(form.prenom)}}
+{{form_row(form.numTel)}}
+{{form_row(form.adresse)}}
+{{ form_row(form.nbHommeAdulte, {"label" : "Nombre hommes adulte"} ) }}
+{{form_row(form.couffin, {"label" : "Couffin Ramadan" } )}}
+{{ form_widget(form) }}
+<input type="submit" class="btn btn-primary" value="Enregistrer">
+{{form_end(form)}}
+</div>
+
+{% endblock %}

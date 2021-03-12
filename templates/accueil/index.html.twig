@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<style>
+</style>
+ {% if citoyens is empty %}
+    <div class="info_home"> Aucun Citoyen n'est enregistré 
+      <p>  Vous pouvez commencer à ajouter des citoyen en cliquant sur <a href="{{path('saisir_citoyen_create') }}"> Ajouter </a></p>
+   </div>
+  {% else %} 
+<h2 class="titre center"> La liste des citoyens du village </h2>
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>N° </th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Adresse</th>
+                <th>Nombre D'homme Adulte</th>
+                <th>Numéro De Télephone </th>
+                <th>Couffin Ramadan</th>
+                <th>Options</th>
+
+            </tr>
+        </thead>
+        <tbody>
+         {% set i = 1 %}
+         {% for citoyen in citoyens %}
+            <tr>
+                <td>{{ i }}</td>
+                <td>{{ citoyen.nom }}</td>
+                <td>{{ citoyen.prenom }}</td>
+                <td>{{ citoyen.adresse }}</td>
+                <td>{{ citoyen.nbHommeAdulte }}</td>
+                <td>{{ citoyen.numTel }}</td>
+                {% if citoyen.couffin %}
+                <td> Oui  </td>
+                {% else %}
+                <td> Non </td>
+                {% endif%}
+                <td>
+                  <a href="{{ path('saisir_citoyen_modification', {'id' :  citoyen.id } ) }}"><button type="button" class="btn btn-primary"><i class="fas fa-pen-alt"></i></button></a>
+                  <button type="button" class="btn btn-info"><i class="fas fa-eye"></i></button>
+                  <a href="{{ path('saisir_citoyen_delete', {'id' : citoyen.id} ) }}"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
+                </td>
+            </tr>
+            {% set i =  i + 1%}
+         {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>N° </th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Adresse</th>
+                <th>Nombre D'homme Adulte</th>
+                <th>Numéro De Télephone </th>
+                <th>Couffin Ramadan </th>
+                <th>Options</th>
+            </tr>
+        </tfoot>
+    </table>
+ {% endif %}   
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable();
+} );
+ </script>    
+{% endblock %}
+
+

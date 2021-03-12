@@ -1,0 +1,92 @@
+.imgLogo {
+    width: 70px;
+}
+
+.titre {
+    text-align: center;
+    margin: 20px;
+    columns: #292828;
+}
+
+.home {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.titre_home {
+    font-family: 'Redressed', cursive;
+    font-size: 3.3em;
+    color: #111;
+    text-align: center;
+    margin: 20px;
+}
+
+.home p {
+    text-align: center;
+    color: #111;
+    margin: 20px;
+    margin-bottom: 60px;
+}
+
+.container .btn {
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+.dataTables_wrapper {
+    margin: 20px 30px 70px;
+}
+
+td .btn {
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+td .btn i {
+    margin-left: -5px;
+    display: block;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    position: fixed;
+}
+
+.copyright {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+    color: rgb(250, 250, 250);
+}
+
+.choix {
+    margin: 70px;
+    text-align: center;
+}
+
+.choix .btn {
+    margin: 20px;
+    min-width: 200px;
+}
+
+.image {
+    width: 80px;
+    margin: auto;
+}
+
+.info_home {
+    font-family: 'Redressed', cursive;
+    font-size: 2em;
+    color: #111;
+    text-align: center;
+    margin: 20px;
+}

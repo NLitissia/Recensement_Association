@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+ <style>
+body {
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat ;
+    background-position:center center;
+    background-attachment: fixed;
+    
+}
+</style>
+<div class="container home">
+<div class="titre_home"> Tharoua N'Si Mouh Ou M'hend </div>
+<p>
+   Bienvenue dans le site du recensement des citoyens du village Ichar3 Iwen Tizi Rached</p>
+    <p>  Si vous avez un compte vous pouvez vous connecter en cliquant sur le Button "j'ai un compte "</p>
+    <p> Si vous êtes membre vous pouvez demander accès au près des adhérentes concernées Merci </p>
+<div class="choix">
+  <a href="{{ path('connexion') }}"><button type="button" class="btn btn-warning">Se connecter</button></a>
+  <a href="{{ path('information') }}"><button type="button" class="btn btn-warning">S'informer</button></a>
+</div>  
+   
+  
+
+</div>
+{% endblock %}
